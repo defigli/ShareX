@@ -127,11 +127,6 @@ namespace ShareX.HelpersLib
             DrawPreviewColors();
         }
 
-        private void UpdateColor(int x, int y)
-        {
-            UpdateColor(x, y, CaptureHelpers.GetPixelColor(x, y));
-        }
-
         private void UpdateColor(int x, int y, Color color)
         {
             txtX.Text = x.ToString();

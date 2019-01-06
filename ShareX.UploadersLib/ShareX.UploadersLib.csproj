@@ -298,7 +298,6 @@
     <Compile Include="FileUploaders\SendSpaceManager.cs" />
     <Compile Include="FileUploaders\ShareCX.cs" />
     <Compile Include="Helpers\AccountInfo.cs" />
-    <Compile Include="Helpers\Argument.cs" />
     <Compile Include="Helpers\KeyFileNameEditor.cs" />
     <Compile Include="OAuth\IOAuth.cs" />
     <Compile Include="OAuth\IOAuth2.cs" />
