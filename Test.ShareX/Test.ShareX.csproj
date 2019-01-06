@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8EDF4429-251A-416D-BB68-93F227191BCF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Test.ShareX</RootNamespace>
+    <AssemblyName>Test.ShareX</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=3.6.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.6.1\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="TestCaptureRegion.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ShareX.HelpersLib\ShareX.HelpersLib.csproj">
+      <Project>{327750e1-9fb7-4cc3-8aea-9bc42180cad3}</Project>
+      <Name>ShareX.HelpersLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShareX.HistoryLib\ShareX.HistoryLib.csproj">
+      <Project>{e7de6237-aea2-498b-8f56-9b392472c490}</Project>
+      <Name>ShareX.HistoryLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShareX.ImageEffectsLib\ShareX.ImageEffectsLib.csproj">
+      <Project>{d13441b6-96e1-4d1b-8a95-58a7d6cb1e24}</Project>
+      <Name>ShareX.ImageEffectsLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShareX.IndexerLib\ShareX.IndexerLib.csproj">
+      <Project>{750c6f46-2c5a-4488-81d3-3b35ca50f3ee}</Project>
+      <Name>ShareX.IndexerLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShareX.MediaLib\ShareX.MediaLib.csproj">
+      <Project>{1a190e53-1419-4cc2-b0e5-3bc7ea861c8b}</Project>
+      <Name>ShareX.MediaLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShareX.NativeMessagingHost\ShareX.NativeMessagingHost.csproj">
+      <Project>{254e398d-f7f5-4b2a-9024-5c121ea6c564}</Project>
+      <Name>ShareX.NativeMessagingHost</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShareX.ScreenCaptureLib\ShareX.ScreenCaptureLib.csproj">
+      <Project>{dbdb0daa-b3ae-4cc4-a8c2-20550b7f32e3}</Project>
+      <Name>ShareX.ScreenCaptureLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShareX.Setup\ShareX.Setup.csproj">
+      <Project>{3d19a94a-7a58-4451-a686-ee70b471c206}</Project>
+      <Name>ShareX.Setup</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShareX.UploadersLib\ShareX.UploadersLib.csproj">
+      <Project>{e1c94415-3424-4517-a2a1-b2fdd1f59c67}</Project>
+      <Name>ShareX.UploadersLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShareX\ShareX.csproj">
+      <Project>{c5ae4585-e9ec-4fa3-b75a-e1210635acb6}</Project>
+      <Name>ShareX</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
