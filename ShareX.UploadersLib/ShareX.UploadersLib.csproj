@@ -291,7 +291,6 @@
     <Compile Include="FileUploaders\Dropbox.cs" />
     <Compile Include="FileUploaders\DropIO.cs" />
     <Compile Include="FileUploaders\FileBin.cs" />
-    <Compile Include="FileUploaders\FileSonic.cs" />
     <Compile Include="FileUploaders\FTPAccount.cs" />
     <Compile Include="FileUploaders\FTP.cs" />
     <Compile Include="FileUploaders\SendSpace.cs" />

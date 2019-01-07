@@ -33,7 +33,7 @@ using System.Windows.Forms;
 
 namespace ShareX
 {
-    public partial class ActionsToolbarForm : Form
+    public class ActionsToolbarForm : Form
     {
         private static ActionsToolbarForm instance;
 

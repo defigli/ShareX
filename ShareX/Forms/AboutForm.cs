@@ -131,11 +131,6 @@ Copyright (c) 2007-2019 ShareX Team";
             pbLogo.Visible = false;
         }
 
-        private void pbSteam_Click(object sender, EventArgs e)
-        {
-            URLHelpers.OpenURL(Links.URL_STEAM);
-        }
-
         private void pbBerkURL_Click(object sender, EventArgs e)
         {
             URLHelpers.OpenURL(Links.URL_BERK);

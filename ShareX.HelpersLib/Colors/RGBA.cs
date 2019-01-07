@@ -29,7 +29,31 @@ namespace ShareX.HelpersLib
 {
     public struct RGBA
     {
-        private int red, green, blue, alpha;
+        public bool Equals(RGBA other)
+        {
+            return red == other.red && green == other.green && blue == other.blue && alpha == other.alpha;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj)) return false;
+            return obj is RGBA other && Equals(other);
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                var hashCode = red;
+                hashCode = (hashCode * 397) ^ green;
+                hashCode = (hashCode * 397) ^ blue;
+                hashCode = (hashCode * 397) ^ alpha;
+                return hashCode;
+            }
+        }
+
+        private int red;
+        private int green, blue, alpha;
 
         public int Red
         {
@@ -149,16 +173,6 @@ namespace ShareX.HelpersLib
         public CMYK ToCMYK()
         {
             return ColorHelpers.ColorToCMYK(this);
-        }
-
-        public override int GetHashCode()
-        {
-            return base.GetHashCode();
-        }
-
-        public override bool Equals(object obj)
-        {
-            return base.Equals(obj);
         }
     }
 }

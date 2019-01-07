@@ -89,8 +89,7 @@ namespace ShareX.UploadersLib.FileUploaders
 
         public string GetAuthToken(string username, string password)
         {
-            string url = URLHelpers.FixPrefix(APIURL);
-            url = URLHelpers.CombineURL(APIURL, "auth-token/?format=json");
+            string url = URLHelpers.CombineURL(APIURL, "auth-token/?format=json");
 
             Dictionary<string, string> args = new Dictionary<string, string>
             {
